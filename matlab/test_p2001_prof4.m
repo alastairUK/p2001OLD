@@ -1,5 +1,5 @@
-if ismac
-    % Code to run on Mac platform
+if (ismac & ~isOctave() )
+    % Code to run on MATLAB on Mac platform
     %
     disp('This code cannot run on Mac platform as it cannot start Excel server for writing the output.');
 else
