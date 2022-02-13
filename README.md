@@ -1,4 +1,4 @@
-# MATLAB/Octave Implementation of Recommendation ITU-R P.2001-3
+# MATLAB/Octave Implementation of Recommendation ITU-R P.2001-4
 
 This code repository contains a MATLAB/Octave software implementation of Recommendation ITU-R P.2001 with a general purpose wide-range terrestrial propagation model in the frequency range 30 MHz to 50 GHz.  
 
@@ -8,12 +8,12 @@ The following table describes the structure of the folder `./matlab/` containing
 
 | File/Folder               | Description                                                         |
 |----------------------------|---------------------------------------------------------------------|
-|`tl_p2001.m`                | MATLAB function implementing Recommendation ITU-R P.2001-3         |           
+|`tl_p2001.m`                | MATLAB function implementing Recommendation ITU-R P.2001-4         |           
 |`validate_p2001_b2iseac.m`  `validate_p2001_prof4.m`                | MATLAB scripts used to validate this implementation using a set of test terrain profiles provided in `./validation_results/`         |   
-|`./validation_examples/`    | Folder containing validation examples for Recommendation ITU-R P.2001-3 |
+|`./validation_examples/`    | Folder containing validation examples for Recommendation ITU-R P.2001-4 |
 |`./validation_results/`	   | Folder containing the results of the validation tests using `tl_p2001.m` on the terrain profiles that corespond to the profiles defined in `./validation_examples/` |
 |`compare_results_vs_ref.m`                 | MATLAB script used to compute the deviations in basic transmission loss `Lb` obtained using `tl_p2001.m` from the reference values available in the folder `./validation_examples/` for profiles `prof4` (land only) and `b2iseac` (mixed path)        |   
-|`./src/`   |             Folder containing the functions called by `tl_2001.m` and `validate_p2001*.m`|
+|`./private/`   |             Folder containing the functions called by `tl_2001.m` and `validate_p2001*.m`|
 
 ## Function Call
 
