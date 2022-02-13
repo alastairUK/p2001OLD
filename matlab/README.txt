@@ -1,11 +1,17 @@
-P2001 Version 3 (28.04.18)
+P2001 Version 3.1 (28.10.19)
 
-Validation examples of Recommendation ITU-R P.2001-2
+MATLAB implementation of Recommendation ITU-R P.2001-3
 
 GENERAL NOTES
 --------------
 
+
 Files and subfolders in the distribution .zip package.
+
+
+  tl_p2001.m                - MATLAB function implementing Recommendation ITU-R P.2001-3
+
+  ./src/	            - Folder containing the functions used by tl_p2001.m and validate_p2001*.m
 
  validate_p2001_b2iseac.m   - MATLAB scripts used to validate the implementation of Recommendation ITU-R P.2001-3
  validate_p2001_prof4.m       as defined in the file tl_p2001.m using a set of test terrain profiles provided in
@@ -22,18 +28,11 @@ Files and subfolders in the distribution .zip package.
                               profiles that corespond to the profiles defined in ./validation_examples/
                               
                               
-Please note that to reproduce the ./validation_results/ the MATLAB implementation of Recommendation ITU-R P.2001-3:
-                              
- tl_p2001.m                 - MATLAB function implementing Recommendation ITU-R P.2001-3                              
-
- ./src/	                    - Folder containing the functions used by tl_p2001.m and validate_p2001*.m
- 
-is required (available from the ITU-R Study Group 3 website on software, data and validation examples).  The relative 
-subfolder structure needs to be observed when running the validate_p2001_b2iseac.m and validate_p2001_prof4.m scripts.
-
 UPDATES AND FIXES
 -----------------
 Version 3.1 (28.10.19)
+        - Modifications in angular distance dependent loss according to ITU-R P.2001-3 (in tl_anomalous_reflection.m)
+	- Restructured and improved the tests
 	- Validation examples are recreated to account for the change in calculation of angular distance dependent loss 
           according to ITU-R P.2001-3
 	- Restructured and improved the tests 
@@ -42,8 +41,8 @@ Version 3.1 (28.10.19)
 
 Version 3 (28.06.18)
         - Corrections according to feedback obtained from CG 3J-3M-13:
-            - Declared empty arrays G and P for no-rain path (precipitation_fade_initial.m)
-            - Introduced additional validation checks for input arguments  
+        - Declared empty arrays G and P for no-rain path (precipitation_fade_initial.m)
+        - Introduced additional validation checks for input arguments  
 
 Version 2 (11.08.17)
         - Corrected a bug (typo) in dl_bull_smooth
