@@ -7,9 +7,24 @@ GENERAL NOTES
 
 Files and subfolders in the distribution .zip package.
 
-  tl_p2001.m                - MATLAB function implementing Recommendation ITU-R P.2001-4
+ tl_p2001.m                - MATLAB function implementing Recommendation ITU-R P.2001-4
+  
+  
+ validate_p2001_b2iseac.m   - MATLAB scripts used to validate the implementation of Recommendation ITU-R P.2001-3
+ validate_p2001_prof4.m       as defined in the file tl_p2001.m using a set of test terrain profiles provided in
+                              the folder ./validation_results/
 
-  ./private/	            - Folder containing the functions used by tl_p2001.m and validate_p2001*.m
+
+ compare_results_vs_ref.m   - MATLAB script used to compute the deviations in basic transmission loss
+                              Lb obtained using tl_p2001.m from the reference values available in the folder
+                              /validation_examples/ for profiles prof4 (land only) and b2iseac (mixed path)
+
+ ./validation_examples/     - Folder containing validation examples for Recommendation ITU-R P.2001-3
+
+ ./validation_results/      - Folder containing the results of the validation tests using tl_p2001.m on the terrain
+                              profiles that corespond to the profiles defined in ./validation_examples/
+
+ ./private/	            - Folder containing the functions used by tl_p2001.m and validate_p2001*.m
 
 
 UPDATES AND FIXES
@@ -26,7 +41,12 @@ Version 3.1 (28.10.19)
 Version 3 (28.06.18)
         - Corrections according to feedback obtained from CG 3J-3M-13:
             - Declared empty arrays G and P for no-rain path (precipitation_fade_initial.m)
-            - Introduced additional validation checks for input arguments  
+            - Introduced additional validation checks for input arguments
+	- Validation examples are recreated to account for the change in calculation of angular distance dependent loss 
+          according to ITU-R P.2001-3
+	- Restructured and improved the tests 
+        - Included octave specific commands for reading/writing xlsx data.
+        - Included script compare_results_vs_reference.m
 
 Version 2 (11.08.17)
         - Corrected a bug (typo) in dl_bull_smooth
@@ -51,7 +71,7 @@ No patent licence is granted, nor is a patent licensing commitment made, by impl
 
 Disclaimer: Other than as expressly provided herein,
 
-(1) the Software is provided "AS IS"ù WITH NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO,
+(1) the Software is provided "AS IS"¬ù WITH NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO,
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGMENT OF INTELLECTUAL PROPERTY RIGHTS and
 
 (2) neither the Software Copyright Holder (or its affiliates) nor the ITU shall be held liable in any event for any damages whatsoever
