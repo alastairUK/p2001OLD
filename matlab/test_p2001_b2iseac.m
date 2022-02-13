@@ -468,9 +468,9 @@ end
 
 [d,h,z] = prof_b2iseac();
 
-if ~exist('great_circle_path.m','file')
-    addpath([s '/src/'])
-end
+% if ~exist('great_circle_path.m','file')
+%     addpath([s '/src/'])
+% end
 
 if (isOctave)
     pkg load windows;

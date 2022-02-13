@@ -9,9 +9,9 @@ clc
 
 
 s = pwd;
-if ~exist('p838.m','file')
-    addpath([s '/src/'])
-end
+% if ~exist('p838.m','file')
+%     addpath([s '/src/'])
+% end
 
 if (isOctave)
     pkg load windows;

@@ -460,9 +460,9 @@ Tpc = 0.001;
 Profile = 'Prof4';
 
 s = pwd;
-if ~exist('great_circle_path.m','file')
-    addpath([s '/src/'])
-end
+% if ~exist('great_circle_path.m','file')
+%     addpath([s '/src/'])
+% end
 
 if ~exist('prof4.m','file')
     addpath([s '/validation_examples/'])
