@@ -8,16 +8,18 @@ close all
 clc
 
 
-s = pwd;
-% if ~exist('p838.m','file')
-%     addpath([s '/src/'])
-% end
+% s = pwd;
+% if (~exist('p838.m','file') )
+%     addpath([s '/private/'])
+%    fprintf(1,'octave\n');
+%end
 
 if (isOctave)
     pkg load windows;
     pkg load io;
     page_screen_output(0);
     page_output_immediately(1);
+
     
 end
 
@@ -54,7 +56,7 @@ for fln = 1:2
     end
     
     if (isOctave)
-        xlsclose(xlsr1);
-        xlsclose(xlsr2);
+        xls1 = xlsclose(xlsr1);
+        xls2 = xlsclose(xlsr2);
     end
 end
