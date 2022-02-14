@@ -1,6 +1,6 @@
 # MATLAB/Octave Implementation of Recommendation ITU-R P.2001-4
 
-This code repository contains a MATLAB/Octave software implementation of Recommendation ITU-R P.2001 with a general purpose wide-range terrestrial propagation model in the frequency range 30 MHz to 50 GHz.  
+This code repository contains a MATLAB/Octave software implementation of [Recommendation ITU-R P.2001-4](https://www.itu.int/rec/R-REC-P.2001/en) with a general purpose wide-range terrestrial propagation model in the frequency range 30 MHz to 50 GHz.  
 
 The reference version of this code (as approved by ITU-R Working Party 3M) is published by Study Group 3 on [ITU-R SG 3 Software, Data, and Validation Web Page](https://www.itu.int/en/ITU-R/study-groups/rsg3/Pages/iono-tropo-spheric.aspx).
 
